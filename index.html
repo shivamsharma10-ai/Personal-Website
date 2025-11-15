@@ -1,1 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shivam Sharma — Personal Website</title>
+  <meta name="description" content="Personal website showcasing skills, education, projects and contact information." />
+  <style>
+    :root{
+      --bg:#0f1724; /* very dark blue */
+      --card:#0b1220;
+      --accent:#06b6d4; /* teal */
+      --muted:#94a3b8;
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      --max:1100px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg),#071021);color:#e6eef8}
+    .container{max-width:var(--max);margin:36px auto;padding:28px}
+
+    header{display:flex;gap:20px;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:16px;align-items:center}
+    .avatar{width:72px;height:72px;border-radius:16px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#04283a,#08324a);font-weight:700}
+    .brand h1{font-size:20px;margin:0}
+    nav a{color:var(--muted);text-decoration:none;margin-left:14px;font-weight:600}
+    nav a:hover{color:var(--accent)}
+
+    main{display:grid;grid-template-columns:1fr 340px;gap:26px;margin-top:22px}
+    @media (max-width:900px){main{grid-template-columns:1fr}nav{display:none}}
+
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:20px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+
+    /* Hero */
+    .hero{display:flex;gap:20px;align-items:center}
+    .hero .intro{flex:1}
+    .intro h2{margin:0 0 6px 0;font-size:28px}
+    .intro p{margin:0;color:var(--muted)}
+    .cta{margin-top:16px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#022; font-weight:700;text-decoration:none}
+
+    /* Right column */
+    aside .contact-list{display:flex;flex-direction:column;gap:10px}
+    .muted{color:var(--muted);font-size:14px}
+
+    /* Sections */
+    section{margin-top:20px}
+    h3.section-title{margin:0 0 12px 0;display:flex;align-items:center;gap:10px}
+
+    /* Skills badges */
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:var(--glass);padding:8px 10px;border-radius:999px;font-weight:600;color:var(--muted)}
+
+    /* Projects grid */
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    @media (max-width:700px){.projects{grid-template-columns:1fr}}
+    .proj{display:flex;gap:10px;align-items:center;padding:10px;border-radius:12px;background:rgba(255,255,255,0.02)}
+    .proj-thumb{width:78px;height:58px;border-radius:8px;background:linear-gradient(135deg,#072a3a,#0a3b4c);display:flex;align-items:center;justify-content:center;font-weight:700}
+    .proj h4{margin:0 0 6px 0;font-size:15px}
+    .proj p{margin:0;color:var(--muted);font-size:13px}
+    .proj a{color:var(--accent);text-decoration:none;font-weight:700;font-size:13px}
+
+    footer{margin-top:26px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* small utilities */
+    .tagline{color:var(--muted);font-size:13px}
+    .divider{height:1px;background:linear-gradient(90deg,transparent,#122434,transparent);margin:18px 0;border-radius:2px}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="avatar" aria-hidden="true">SS</div>
+        <div>
+          <h1>Shivam Sharma</h1>
+          <div class="tagline">BTech CSE • Aspiring SWE • Problem Solver</div>
+        </div>
+      </div>
+      <nav aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Education / Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <div>
+        <section id="home" class="card hero" aria-labelledby="home-label">
+          <div class="intro">
+            <h2 id="home-label">Hello — I’m Shivam</h2>
+            <p>I’m a first-year BTech CSE student focused on building full-stack web apps, learning algorithms, and preparing for higher placements. I enjoy competition programming, small projects, and collaborating on open-source.</p>
+            <div class="cta">
+              <a class="btn" href="#projects">View projects</a>
+              <a class="btn" style="margin-left:8px;opacity:0.95;background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)" href="#contact">Get in touch</a>
+            </div>
+          </div>
+          <div style="width:180px;text-align:center">
+            <svg width="150" height="150" viewBox="0 0 200 200" role="img" aria-label="Profile placeholder">
+              <defs>
+                <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+                  <stop offset="0" stop-color="#08324a" />
+                  <stop offset="1" stop-color="#04566b" />
+                </linearGradient>
+              </defs>
+              <rect rx="30" width="200" height="200" fill="url(#g1)" />
+              <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" font-size="56" font-family="monospace" fill="#bfeef6">SS</text>
+            </svg>
+          </div>
+        </section>
+
+        <section id="about" class="card" aria-labelledby="about-label">
+          <h3 id="about-label" class="section-title">About Me</h3>
+          <p class="muted">I am starting my first year of BTech in Computer Science and Engineering. I aim for strong placement outcomes and enjoy building small projects to apply new concepts. Outside coding I stay active — badminton and bodyweight exercises are my go-to routines.</p>
+          <div class="divider"></div>
+          <h3 class="section-title">Education</h3>
+          <p><strong>Incoming BTech (CSE)</strong> — Delhi Technological University.<br><span class="muted">Relevant coursework: Programming fundamentals, discrete math, data structures.</span></p>
+        </section>
+
+        <section id="skills" class="card" aria-labelledby="skills-label">
+          <h3 id="skills-label" class="section-title">Education / Skills</h3>
+          <div style="display:flex;gap:22px;flex-wrap:wrap">
+            <div style="flex:1;min-width:220px">
+              <h4 style="margin:0 0 8px 0">Skills</h4>
+              <div class="skills">
+                <div class="skill">C</div>
+                <div class="skill">C++</div>
+                <div class="skill">HTML / CSS</div>
+                <div class="skill">Java</div>
+                <div class="skill">Git & GitHub</div>
+                <div class="skill">DSA</div>
+              </div>
+            </div>
+
+            <div style="min-width:220px">
+              <h4 style="margin:0 0 8px 0">Certifications / Achievements</h4>
+              <ul style="margin:0 0 0 18px;color:var(--muted)">
+                <li>School-level programming competitions — top performer</li>
+                <li>Completed web development mini-projects</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects" class="card" aria-labelledby="projects-label">
+          <h3 id="projects-label" class="section-title">Projects / Portfolio</h3>
+          <p class="muted">Below are a few sample projects with short descriptions and links to source or live demos.</p>
+          <div class="projects">
+            <article class="proj">
+              <div class="proj-thumb" aria-hidden="true">A1</div>
+              <div>
+                <h4>Portfolio Website</h4>
+                <p>Single-page responsive site built with HTML & CSS to showcase work and contact details.</p>
+                <a href="https://github.com/your-github/portfolio" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+      </div>
+
+      <aside>
+        <div class="card">
+          <h3 class="section-title">Contact Information</h3>
+          <div class="contact-list">
+            <div><strong>Email:</strong> <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank"> .sharma100806@gmail.com</a></div>
+            <div><strong>Phone:</strong> <a href="tel:+9192965 42995">+91 92965 42995</a></div>
+            <div><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/shivam-sharma-a9705637b/" target="_blank" rel="noopener noreferrer">linkedin.com/in/your-profile</a></div>
+            <div><strong>GitHub:</strong> <a href="https://github.com/shivamsharma10-ai" target="_blank" rel="noopener noreferrer">github.com/your-github</a></div>
+          </div>
+
+          <div class="divider"></div>
+
+          <h3 class="section-title">Quick facts</h3>
+          <p class="muted">175 cm • 78 kg • 19 years old • Hosteller at DTU </p>
+        </div>
+
+        <div style="height:18px"></div>
+      </aside>
+    </main>
+
+    <footer class="container" style="max-width:var(--max);padding:16px 28px 40px 28px">
+      <div class="muted">Made with HTML &amp; CSS • Replace text/images with your own content. &copy; 2025 Shivam Sharma</div>
+    </footer>
+  </div>
+</body>
+</html>
 
